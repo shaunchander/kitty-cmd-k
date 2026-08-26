@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/ff961a63-d4eb-4e37-8a91-4601ef947504
+
 <h1 align="center">⌘K kitty-cmd-k</h1>
 <p align="center">One <code>cmd+k</code> for kitty: jump to any git worktree or project and open it in your layout.</p>
 
