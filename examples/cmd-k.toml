@@ -1,0 +1,33 @@
+# Central layouts for kitty-cmd-k: ~/.config/kitty/cmd-k.toml
+#
+# [[sessions]] entries are tried top to bottom; `match` is a regex tested
+# against the full path of the worktree or project being opened. The first hit
+# wins. If nothing matches, [default] is used. If there is no [default] either,
+# the tab opens with a single shell.
+#
+# session_file paths are relative to this file unless absolute.
+
+[[sessions]]
+match = "-api$"
+session_file = "sessions/backend.conf"
+
+[[sessions]]
+match = "-(ui|web)$"
+tab_title = "web · {basename}"
+layout = "tall"
+
+[[sessions.panes]]
+title = "editor"
+command = "nvim"
+
+[[sessions.panes]]
+title = "dev server"
+location = "vsplit"
+command = "npm run dev"
+
+[[sessions.panes]]
+title = "shell"
+location = "hsplit"
+
+[default]
+session_file = "sessions/ide.conf"

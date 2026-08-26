@@ -1,0 +1,27 @@
+# Per-repo layout for kitty-cmd-k.
+#
+# Save as .kitty-cmd-k.toml in a repo root (or in a single worktree). It wins
+# over ~/.config/kitty/cmd-k.toml for that repo and all of its worktrees.
+#
+# Template variables: {branch} {repo} {path} {basename}
+#                     ({FOLDER_NAME} and {PROJECT_DIR} are aliases of {basename} and {path})
+
+# Option 1 — point at a file in kitty's session syntax (relative to this file):
+session_file = ".kitty/ide.conf"
+
+# Option 2 — describe the tab inline instead:
+# tab_title = "{repo} ({branch})"
+# layout = "splits"
+#
+# [[panes]]
+# title = "editor"
+# command = "nvim"
+#
+# [[panes]]
+# title = "server"
+# location = "vsplit"
+# command = "npm run dev"
+#
+# [[panes]]
+# title = "shell"
+# location = "hsplit"
